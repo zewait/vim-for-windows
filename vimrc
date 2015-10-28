@@ -6,6 +6,9 @@
 " emmet-vim     http://github.com/mattn/emmet-vim
 " NERDtree      https://github.com/scrooloose/nerdtree
 " DrawIt        https://github.com/vim-scripts/DrawIt
+" vim-node      https://github.com/moll/vim-node
+" java_getset   http://www.vim.org/scripts/script.php?script_id=490
+"
 "nmap lb 0
 "nmap le $
 let mapleader=";"
@@ -41,6 +44,12 @@ set tabstop=4
 set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
+" 设置各种文件类型的缩进
+autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype coffeescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype jade setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " 禁止光标闪烁
 "set gcr=a:block-blinkon0
 " 禁止显示滚动条
@@ -96,4 +105,7 @@ let NERDTreeWinPos="left"
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除对应 buffer
 let NERDTreeAutoDeleteBuffer=1
+
+
+
 
