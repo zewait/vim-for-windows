@@ -49,6 +49,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'moll/vim-node'
 Plugin 'java_getset.vim'
+Plugin 'godlygeek/tabular'
 
 
 " All of your Plugins must be added before the following line
