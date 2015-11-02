@@ -72,10 +72,10 @@ set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
 set nobackup
+set backupdir=$TEMP,$TMP,.
+set directory=$TEMP,$TMP,.
 " 允许用指定语法高亮配色方案替换默认方案
 syntax on
-" 自适应不同语言的智能缩进
-filetype indent on
 " 将制表符扩展为空格
 set expandtab
 " 设置编辑时制表符占用空格数
@@ -94,6 +94,15 @@ set nofoldenable
 set background=dark
 let g:Powerline_colorscheme='solarized256'
 
+
+
+
+" 插件配置
+" jelera/vim-javascript-syntax
+
+
+
+
 " nerdtree config
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记： file list
 nmap <Leader>fl :NERDTreeToggle<CR>
@@ -105,7 +114,3 @@ let NERDTreeWinPos="left"
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除对应 buffer
 let NERDTreeAutoDeleteBuffer=1
-
-
-
-
