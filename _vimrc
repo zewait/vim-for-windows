@@ -51,6 +51,14 @@ Plugin 'moll/vim-node'
 Plugin 'java_getset.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'derekwyatt/vim-scala'
+" Fuzzy file, buffer, mru, tag, etc finder. http://kien.github.com/ctrlp.vim
+Plugin 'kien/ctrlp.vim'
+Plugin 'rustushki/JavaImp.vim'
+let g:JavaImpPaths = 
+    \ $JAVA_HOME . "\\src," .
+    \ "D:\\shifan\\workspace\\java_ee\\EDSWap\\app"
+let g:JavaImpDataDir = $VIM_HOME . "\\JavaImp"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

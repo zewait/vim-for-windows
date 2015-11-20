@@ -50,6 +50,7 @@ autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype coffeescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype jade setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype java set tags=$JAVA_HOME/tags,./tags,tags;
 " 禁止光标闪烁
 "set gcr=a:block-blinkon0
 " 禁止显示滚动条
