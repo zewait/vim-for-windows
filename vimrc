@@ -93,6 +93,7 @@ set nofoldenable
 
 " ≈‰÷√∑Ω∞∏
 set background=dark
+colorscheme phd
 let g:Powerline_colorscheme='solarized256'
 
 
