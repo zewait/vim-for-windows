@@ -11,6 +11,8 @@
 "
 "nmap lb 0
 "nmap le $
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
 let mapleader=";"
 vnoremap <Leader>y "+y
 nmap <Leader>p "+p
@@ -24,6 +26,15 @@ nnoremap <Leader>hw <C-W>h
 nnoremap <Leader>kw <C-W>k
 nnoremap <Leader>jw <C-W>j
 nnoremap <Leader>pa %
+" easier moving of code blocks
+" Try to go into visual mode (v), thenselect several lines of code here and
+" then press ``>`` several times.
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+" Useful settings
+set history=700
+set undolevels=700
 
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
@@ -44,6 +55,9 @@ set tabstop=4
 set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
+" 设置文件改变自动加载
+set autoread
+" set colorcolumn=80
 " 设置各种文件类型的缩进
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -71,8 +85,17 @@ set number
 set cursorline
 set cursorcolumn
 " 高亮显示搜索结果
+" Make search case insensitive
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Disable stupid backup and swap files - they trigger too many events
+" for file system watchers
 set nobackup
+set nowritebackup
+set noswapfile
 set backupdir=$TEMP,$TMP,.
 set directory=$TEMP,$TMP,.
 " 允许用指定语法高亮配色方案替换默认方案
