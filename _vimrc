@@ -41,6 +41,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'phd'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'kshenoy/vim-signature'
@@ -63,7 +64,8 @@ set wildignore+=*.class,tmp,target,bin,*.pyc,*_build/*,*/coverage/*
 Plugin 'rustushki/JavaImp.vim'
 let g:JavaImpPaths = 
     \ $JAVA_HOME . "\\src," .
-    \ "D:\\shifan\\workspace\\java_ee\\EDSWap\\app"
+    \ "E:\\play\\activator-dist-1.3.6\\repository," .  
+    \ "C:\\workspace\\java\\ETaoInterface\\app"
 let g:JavaImpDataDir = $VIM_HOME . "\\JavaImp"
 
 Plugin 'matchit.zip'
@@ -72,16 +74,18 @@ Plugin 'matchit.zip'
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-Plugin 'klen/python-mode'
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
-let g:pymode_breakpoint = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+"Plugin 'klen/python-mode'
+"let g:pymode_rope_completion_bind = '<C-c>'
+"map <Leader>g :call RopeGotoDefinition()<CR>
+"let ropevim_enable_shortcuts = 1
+"let g:pymode_rope_goto_def_newwin = "vnew"
+"let g:pymode_rope_extended_complete = 1
+"let g:pymode_breakpoint = 0
+"let g:pymode_syntax = 1
+"let g:pymode_syntax_builtin_objs = 0
+"let g:pymode_syntax_builtin_funcs = 0
+"let g:pymode_rope_completion_bind = '<C-C>'
+"map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Settings for jedi-vim
 " cd ~/.vim/bundle
@@ -112,6 +116,23 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 " Python folding
 Plugin 'Efficient-python-folding'
 set nofoldenable
+
+" Improved C++11/14 STL syntax highlighting
+Plugin 'Mizuchi/STL-Syntax'
+
+Plugin 'taglist.vim'
+"let Tlist_Ctags_Cmd = 'ctags'
+"不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Show_One_File = 1
+"如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Exit_OnlyWindow = 1
+"在右侧窗口中显示taglist窗口 
+let Tlist_Use_Right_Window = 1
+
+Plugin 'SirVer/ultisnips'
+Plugin 'isRuslan/vim-es6'
+
+Plugin 'BufOnly.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

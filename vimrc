@@ -100,14 +100,6 @@ set backupdir=$TEMP,$TMP,.
 set directory=$TEMP,$TMP,.
 " 允许用指定语法高亮配色方案替换默认方案
 syntax on
-" 将制表符扩展为空格
-set expandtab
-" 设置编辑时制表符占用空格数
-set tabstop=4
-" 设置格式化时制表符占用空格数
-set shiftwidth=4
-" 让 vim 把连续数量的空格视为一个制表符
-set softtabstop=4
 " 基于缩进或语法进行代码折叠
 "set foldmethod=indent
 set foldmethod=syntax
