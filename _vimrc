@@ -51,7 +51,7 @@ Plugin 'mattn/emmet-vim'
 " autocmd FileType html, css EmmetInstall
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/DrawIt'
-Plugin 'moll/vim-node'
+" Plugin 'moll/vim-node'
 Plugin 'java_getset.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'digitaltoad/vim-jade'
@@ -65,7 +65,8 @@ Plugin 'rustushki/JavaImp.vim'
 let g:JavaImpPaths = 
     \ $JAVA_HOME . "\\src," .
     \ "E:\\play\\activator-dist-1.3.6\\repository," .  
-    \ "C:\\workspace\\java\\ETaoInterface\\app"
+    \ ".\\app" .
+    \ ".\\test"
 let g:JavaImpDataDir = $VIM_HOME . "\\JavaImp"
 
 Plugin 'matchit.zip'

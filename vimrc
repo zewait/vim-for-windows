@@ -81,6 +81,7 @@ set laststatus=2
 set ruler
 " 开启行号显示
 set number
+set colorcolumn=80
 " 高亮显示当前行/列
 set cursorline
 set cursorcolumn
