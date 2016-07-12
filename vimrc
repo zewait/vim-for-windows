@@ -9,6 +9,11 @@
 " vim-node      https://github.com/moll/vim-node
 " java_getset   http://www.vim.org/scripts/script.php?script_id=490
 "
+"
+
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "nmap lb 0
 "nmap le $
 " Automatic reloading of .vimrc
@@ -26,6 +31,10 @@ nnoremap <Leader>hw <C-W>h
 nnoremap <Leader>kw <C-W>k
 nnoremap <Leader>jw <C-W>j
 nnoremap <Leader>pa %
+" 有折叠行就映射gj/gk
+" 没有就按平时j/k
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " easier moving of code blocks
 " Try to go into visual mode (v), thenselect several lines of code here and
 " then press ``>`` several times.
@@ -81,6 +90,8 @@ set laststatus=2
 set ruler
 " 开启行号显示
 set number
+" 开启相对行号
+set relativenumber
 set colorcolumn=80
 " 高亮显示当前行/列
 set cursorline

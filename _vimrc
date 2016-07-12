@@ -135,6 +135,9 @@ Plugin 'isRuslan/vim-es6'
 
 Plugin 'BufOnly.vim'
 
+Plugin 'FooSoft/vim-argwrap'
+nnoremap <silent> <leader>a :ArgWrap<CR>
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
